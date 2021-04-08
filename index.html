@@ -2,48 +2,51 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css">
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
-    <header>
-        <h1>Loadeksdi's universe</h1>
+    <div class="top">
+        <header>
+            <h1>Loadeksdi's universe</h1>
+        </header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Professional life</a></li>
+                <li><a onclick="updateDocumentOnProClick()">Professional life</a></li>
                 <li><a href="#">Interests</a></li>
                 <li><a href="#">Projects</a></li>
             </ul>
         </nav>
-    </header>
-    <section class="introduction">
-        <h2>Hello Traveler, welcome to my personal page</h2>
-        <p>I don't really know why I created this page. I'm glad you came tho. Please enjoy your stay. Most of things are probably WIP but I'd like to create a dynamic version of my universe based on my Internet activity.</p>
-    </section>
-    <section class="pro">
-        <h2>What I'm doing with my life</h2>
-        <p>As you may have understood it, I'm a Computer Science student. I do follow an engineer cursus at EFREI Paris school. In addition, I work partly for BNP Paribas as a Designer/Developer intervening for topics such as obsolescence,
-            application maintenance and development of new features. Last year I was already working as a helpdesk technician for the Salvation Army and got my University Technological Diploma in Computer Science.</p>
-    </section>
+    </div>
+    <div class="container">
+        <section class="introduction">
+            <h2>Hello Traveler, welcome to my personal page</h2>
+            <p>I don't really know why I created this page. I'm glad you came tho. Please enjoy your stay. Most of things are probably WIP but I'd like to create a dynamic version of my universe based on my Internet activity.</p>
+        </section>
+        <section class="pro">
+            <h2>What I'm doing with my life</h2>
+            <p>As you may have understood it, I'm a Computer Science student. I do follow an engineer cursus at EFREI Paris school. In addition, I work partly for BNP Paribas as a Designer/Developer intervening for topics such as obsolescence,
+                application maintenance and development of new features.<br> Last year I was already working as a helpdesk technician for the Salvation Army and got my University Technological Diploma at Paris University.</p>
+        </section>
+
+
+    </div>
     <div class="content">
         <div class="firstFadeIn">
             <h1>Welcome to my universe</h1>
         </div>
-        <div class="secondFadeIn" onclick="updateDocumentOnClick()">
+        <div class="secondFadeIn" onclick="updateDocumentOnButtonClick()">
             <button>Enter ?</button>
         </div>
     </div>
     <footer>
-        <a href="https://discord.gg/VSDh5AZ8YV">
-            <i class="fab fa-discord"></i>
-        </a>
-        <a href="https://twitter.com/voidembracer99">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/nicolas-orvain/">
-            <i class="fab fa-linkedin"></i>
-        </a>
+        <h2>
+            <a href="https://discord.gg/VSDh5AZ8YV"><i class="fab fa-discord"></i></a> &nbsp
+            <a href="https://twitter.com/voidembracer99"><i class="fab fa-twitter"></i></a> &nbsp
+            <a href="https://www.linkedin.com/in/nicolas-orvain/"><i class="fab fa-linkedin"></i></a>
+        </h2>
     </footer>
 </body>
 <script src="js/script.js"></script>

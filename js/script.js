@@ -53,7 +53,7 @@ function sendMessage(){
     });
     console.log(message);
     //const url = "localhost:3000";
-    const url = "http://212.47.231.250:4472"
+    const url = "https://212.47.231.250:4472"
     fetch(url, {
         method: "POST",
         body: message,

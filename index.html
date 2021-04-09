@@ -69,10 +69,17 @@
         <section class="activity">
             <h2>What am I currently doing ?</h2>
             <h3>Latest Twitter activity</h3>
-            <a class="twitter-timeline" data-width="900" data-height="600" data-theme="dark" href="https://twitter.com/voidembracer99?ref_src=twsrc%5Etfw">Tweets by voidembracer99</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <!--<a class="twitter-timeline" data-width="900" data-height="600" data-theme="dark" href="https://twitter.com/voidembracer99?ref_src=twsrc%5Etfw">Tweets by voidembracer99</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
             <form>
-                <input type="text" class="message" maxlength="2000">
-                <input type="button" onclick="sendMessage()">
+                <fieldset>
+                    <label for="nickname">Choose a nickname :</label>
+                    <input type="text" class="nickname" id="nickname" maxlength="20" required>
+                </fieldset>
+                <fieldset>
+                    <label for="message">Chat with me:</label>
+                    <textarea id="message" class="message" maxlength="2000" rows="4" cols="45" required></textarea>
+                </fieldset>
+                <input type="button" onclick="sendMessage()" value="Envoyer!">
             </form>
         </section>
     </div>

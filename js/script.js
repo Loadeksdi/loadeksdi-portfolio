@@ -1,3 +1,6 @@
+const messages = new Map();
+let author;
+
 function updateDocumentBasedOnCaller(caller) {
     switch (caller) {
         case 0:
@@ -47,11 +50,10 @@ function updateDocumentBasedOnCaller(caller) {
 
 function sendMessage(){
     const message = JSON.stringify({message: {
-            time: new Date(),
-            text: document.querySelector(".message").value
-        }
-    });
-    console.log(message);
+        author: author === undefined ? document.querySelector(".nickname").value : author,
+        text: document.querySelector(".message").value
+    }});
+    const date = new Date();
     //const url = "localhost:3000";
     const url = "http://212.47.231.250:4472"
     fetch(url, {
@@ -59,4 +61,5 @@ function sendMessage(){
         body: message,
         headers : new Headers({'Content-Type': 'application/json'})
     }).then(res => {console.log(res)});
+    messages.set(date, message);
 }

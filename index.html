@@ -13,10 +13,11 @@
         </header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a onclick="updateDocumentOnProClick()">Professional life</a></li>
-                <li><a href="#">Interests</a></li>
-                <li><a href="#">Projects</a></li>
+                <li onclick="updateDocumentBasedOnCaller(1)">Home</li>
+                <li onclick="updateDocumentBasedOnCaller(2)">Professional life</li>
+                <li onclick="updateDocumentBasedOnCaller(3)">Interests</li>
+                <li onclick="updateDocumentBasedOnCaller(4)">Projects</li>
+                <li onclick="updateDocumentBasedOnCaller(5)">My Activity</li>
             </ul>
         </nav>
     </div>
@@ -30,15 +31,57 @@
             <p>As you may have understood it, I'm a Computer Science student. I do follow an engineer cursus at EFREI Paris school. In addition, I work partly for BNP Paribas as a Designer/Developer intervening for topics such as obsolescence,
                 application maintenance and development of new features.<br> Last year I was already working as a helpdesk technician for the Salvation Army and got my University Technological Diploma at Paris University.</p>
         </section>
-
-
+        <section class="interests">
+            <h2>My tastes</h2>
+            <h3>Video games</h3>
+            <p>I'm a huge video games player, I've been playing since I was 6 years old. My favourite games are League of Legends, Minecraft, The Elder Scrolls V : Skyrim, MMORPGs and most of Nintendo franchises.</p>
+            <h4>League of Legends</h4>
+            <p></p>
+            <h4>Minecraft</h4>
+            <p></p>
+            <h4>The Elder Scrolls V: Skyrim</h4>
+            <p></p>
+            <h4>Nintendo franchises</h4>
+            <p></p>
+            <h4>MMORPGs</h4>
+            <p></p>
+            <h3>Development</h3>
+            <h4>Java</h4>
+            <h3>Sport</h3>
+            <h4>Volleyball</h4>
+            <p></p>
+            <h3>Arts</h3>
+            <p>Just a quick note about art: I'm not an artist myself. I do not wish to put effort in discovering any art for an enough long period of time for it to be interesting. It might change a day or another but what I want to share here is my taste in genres of art I truly appreciate for their aesthetic. I don't even have an huge artistic culture, I've just discovered things that I like and I think that's enough to spread content.</p>
+            <h4>Music</h4>
+            <p></p>
+            <h4>Literature</h4>
+            <p></p>
+            <h4>Painting</h4>
+            <p></p>
+            <h4>Anime</h4>
+            <p></p>
+        </section>
+        <section class="projects">
+            <h2>What I like to put my energy into</h2>
+            <h3>Discord bots !</h3>
+            <p></p>
+        </section>
+        <section class="activity">
+            <h2>What am I currently doing ?</h2>
+            <h3>Latest Twitter activity</h3>
+            <a class="twitter-timeline" data-width="900" data-height="600" data-theme="dark" href="https://twitter.com/voidembracer99?ref_src=twsrc%5Etfw">Tweets by voidembracer99</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <form>
+                <input type="text" class="message" maxlength="2000">
+                <input type="button" onclick="sendMessage()">
+            </form>
+        </section>
     </div>
     <div class="content">
         <div class="firstFadeIn">
             <h1>Welcome to my universe</h1>
         </div>
-        <div class="secondFadeIn" onclick="updateDocumentOnButtonClick()">
-            <button>Enter ?</button>
+        <div class="secondFadeIn">
+            <button onclick="updateDocumentBasedOnCaller(0)">Enter ?</button>
         </div>
     </div>
     <footer>

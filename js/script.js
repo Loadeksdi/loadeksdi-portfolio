@@ -46,14 +46,17 @@ function updateDocumentBasedOnCaller(caller) {
 }
 
 function sendMessage(){
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "212.47.231.250:3000", true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
     const message = JSON.stringify({message: {
             time: new Date(),
             text: document.querySelector(".message").value
         }
     });
     console.log(message);
-    xhr.send(message);
+    //const url = "localhost:3000";
+    const url = "212.47.231.250:3000"
+    fetch(url, {
+        method: "POST",
+        body: message,
+        headers : new Headers({'Content-Type': 'application/json'})
+    }).then(res => {console.log(res)});
 }

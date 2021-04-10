@@ -149,3 +149,8 @@ a {
     height: 50%;
     flex: 1 0 auto;
 }
+
+.chat {
+    height: 10vh;
+    overflow: scroll;
+}

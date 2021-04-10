@@ -1,5 +1,22 @@
-const messages = new Map();
 let author;
+const socket = io("localhost:3000");
+//const socket = io("https://discord-bridge.loadeksdi.com:443");
+
+socket.on('message', async (msg) => {
+   alert(msg.text);
+});
+
+document.querySelector("form").addEventListener('submit', function(e) {
+    e.preventDefault();
+    const input = document.querySelector(".chat");
+    if (input.value) {
+        const message = {
+            author: author === undefined ? document.querySelector(".nickname").value : author,
+            text: input.value
+        };
+        socket.emit('message', message);
+    }
+});
 
 function updateDocumentBasedOnCaller(caller) {
     switch (caller) {
@@ -46,20 +63,4 @@ function updateDocumentBasedOnCaller(caller) {
             document.querySelector(".projects").style.display = "none";
             document.querySelector(".activity").style.display = "block";
     }
-}
-
-function sendMessage(){
-    const message = JSON.stringify({message: {
-        author: author === undefined ? document.querySelector(".nickname").value : author,
-        text: document.querySelector(".message").value
-    }});
-    const date = new Date();
-    const url = "https://discord-bridge.loadeksdi.com:443"
-    fetch(url, {
-        method: "POST",
-        body: message,
-        headers : new Headers({'Content-Type': 'application/json'}),
-        mode: "cors"
-    }).then(res => {console.log(res)});
-    messages.set(date, message);
 }

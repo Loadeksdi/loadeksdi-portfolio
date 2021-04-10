@@ -76,10 +76,10 @@
                     <input type="text" class="nickname" id="nickname" maxlength="20" required>
                 </fieldset>
                 <fieldset>
-                    <label for="message">Chat with me:</label>
-                    <textarea id="message" class="message" maxlength="2000" rows="4" cols="45" required></textarea>
+                    <label for="chat">Chat with me:</label>
+                    <input type="text" id="chat" class="chat" required>
                 </fieldset>
-                <input type="button" onclick="sendMessage()" value="Envoyer!">
+                <input type="submit" value="Send message">
             </form>
         </section>
     </div>
@@ -99,5 +99,6 @@
         </h2>
     </footer>
 </body>
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js" integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 </html>

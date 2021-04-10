@@ -59,7 +59,8 @@ function sendMessage(){
     fetch(url, {
         method: "POST",
         body: message,
-        headers : new Headers({'Content-Type': 'application/json'})
+        headers : new Headers({'Content-Type': 'application/json'}),
+        mode: "cors"
     }).then(res => {console.log(res)});
     messages.set(date, message);
 }

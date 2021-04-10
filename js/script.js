@@ -55,7 +55,7 @@ function sendMessage(){
     }});
     const date = new Date();
     //const url = "localhost:3000";
-    const url = "http://212.47.231.250:4472"
+    const url = "https://discord-bridge.loadeksdi.com:443"
     fetch(url, {
         method: "POST",
         body: message,

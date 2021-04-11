@@ -1,6 +1,6 @@
 let author;
 //const socket = io("localhost:3000");
-const socket = io("https://discord-bridge.loadeksdi.com:443");
+const socket = io("discord-bridge.loadeksdi.com");
 
 socket.on('message', async (msg) => {
    alert(msg.text);

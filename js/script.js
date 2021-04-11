@@ -22,7 +22,7 @@ function updateChat() {
 document.querySelector("form").addEventListener('submit', function(e) {
     e.preventDefault();
     const nickname = document.querySelector(".nickname");
-    nickname.readonly = true;
+    nickname.readOnly = true;
     const input = document.querySelector(".message");
     if (input.value) {
         const message = {

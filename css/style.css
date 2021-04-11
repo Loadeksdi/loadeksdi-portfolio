@@ -151,15 +151,15 @@ a {
 }
 
 .message {
-    height: 10vh;
+    height: 5vh;
     overflow: scroll;
 }
 
 .chat {
-    font-family: Consolas serif;
+    font-family: Consolas;
     color: white;
     background: black;
-    height: 30vh;
-    width: 60vh;
+    height: 25vh;
+    width: 50vh;
     overflow: scroll;
 }

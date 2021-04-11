@@ -1,20 +1,38 @@
-let author;
 //const socket = io("localhost:3000");
 const socket = io("discord-bridge.loadeksdi.com");
+const messages = [];
 
 socket.on('message', async (msg) => {
-   alert(msg.text);
+    messages.push({
+        date: new Date(),
+        author: "Loadeksdi",
+        text: msg.text
+    });
+    updateChat();
 });
+
+function updateChat() {
+    let str = "";
+    messages.forEach(msg => {
+        str += `[${msg.date.toLocaleString('en-GB', { timeZone: 'UTC' })}] ${msg.author} : ${msg.text}\n`;
+    });
+    document.querySelector(".chat").value = str;
+}
 
 document.querySelector("form").addEventListener('submit', function(e) {
     e.preventDefault();
-    const input = document.querySelector(".chat");
+    const nickname = document.querySelector(".nickname");
+    nickname.readonly = true;
+    const input = document.querySelector(".message");
     if (input.value) {
         const message = {
-            author: author === undefined ? document.querySelector(".nickname").value : author,
+            author: nickname.value,
             text: input.value
         };
         socket.emit('message', message);
+        message.date = new Date();
+        messages.push(message);
+        updateChat();
     }
 });
 

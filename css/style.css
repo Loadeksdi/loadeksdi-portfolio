@@ -150,7 +150,16 @@ a {
     flex: 1 0 auto;
 }
 
-.chat {
+.message {
     height: 10vh;
+    overflow: scroll;
+}
+
+.chat {
+    font-family: Consolas serif;
+    color: white;
+    background: black;
+    height: 30vh;
+    width: 60vh;
     overflow: scroll;
 }

@@ -1,6 +1,12 @@
 //const socket = io("localhost:3000");
 const socket = io("discord-bridge.loadeksdi.com");
 const messages = [];
+let id;
+function uuidv4() {
+    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    );
+}
 
 socket.on('message', async (msg) => {
     messages.push({
@@ -24,8 +30,10 @@ document.querySelector("form").addEventListener('submit', function(e) {
     const nickname = document.querySelector(".nickname");
     nickname.readOnly = true;
     const input = document.querySelector(".message");
+    id = id === undefined ? uuidv4() : id;
     if (input.value) {
         const message = {
+            id,
             author: nickname.value,
             text: input.value
         };

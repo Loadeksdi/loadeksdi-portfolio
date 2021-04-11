@@ -14,7 +14,7 @@ socket.on('message', async (msg) => {
 function updateChat() {
     let str = "";
     messages.forEach(msg => {
-        str += `[${msg.date.toLocaleString('en-GB', { timeZone: 'UTC' })}] ${msg.author} : ${msg.text}\n`;
+        str += `[${msg.date.toLocaleString(navigator.language, { timeZone: 'UTC' })}] ${msg.author} : ${msg.text}\n`;
     });
     document.querySelector(".chat").value = str;
 }

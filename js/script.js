@@ -14,7 +14,7 @@ socket.on('message', async (msg) => {
 function updateChat() {
     let str = "";
     messages.forEach(msg => {
-        str += `[${msg.date.toLocaleString(navigator.language, { timeZone: 'UTC' })}] ${msg.author} : ${msg.text}\n`;
+        str += `[${msg.date.toLocaleString(navigator.language)}] ${msg.author} : ${msg.text}\n`;
     });
     document.querySelector(".chat").value = str;
 }
@@ -29,6 +29,7 @@ document.querySelector("form").addEventListener('submit', function(e) {
             author: nickname.value,
             text: input.value
         };
+        input.value = "";
         socket.emit('message', message);
         message.date = new Date();
         messages.push(message);

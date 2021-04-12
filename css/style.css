@@ -190,6 +190,7 @@ header {
 }
 
 .headline {
+    transition-duration: 0.01ms;
     font-family: 'Work Sans', sans-serif;
     font-size: 2.5rem;
     color: #F7F7FF;

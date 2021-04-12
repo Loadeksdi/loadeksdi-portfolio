@@ -50,7 +50,7 @@ function updateDocumentBasedOnCaller(caller) {
         case 0:
             document.querySelector("html").style.background = "rgba(49, 49, 57, 1) no-repeat";
             document.querySelector(".content").style.display = "none";
-            document.querySelector(".container").style.display = "flex";
+            document.querySelector(".container").style.display = "inline-flex";
             document.querySelector(".introduction").style.display = "block";
             document.querySelector(".top").style.display = "block";
             document.querySelector("footer").style.display = "block";

@@ -1,3 +1,5 @@
+/** General and shared properties*/
+
 html {
     background: rgb(49, 49, 57) linear-gradient(0deg, rgba(49, 49, 57, 1) 7%, rgba(113, 113, 199, 1) 75%) no-repeat;
     background-size: 100% 100%;
@@ -11,7 +13,6 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    flex: 1 0 auto;
 }
 
 .content {
@@ -20,6 +21,86 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+h1 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 2.5rem;
+    color: #F7F7FF;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 2rem;
+    color: #F7F7FF;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1rem;
+    color: #F7F7FF;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1rem;
+    color: rgba(113, 113, 199, 1);
+    text-align: center;
+}
+
+p {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1rem;
+    color: #F7F7FF;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto 40px auto;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1rem;
+    color: #F7F7FF;
+    padding: 10px 0;
+}
+
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/** Home page */
+
+button {
+    background: transparent;
+    border: solid #F7F7FF 3px;
+    border-radius: 5px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.5rem;
+    color: #F7F7FF;
 }
 
 .firstFadeIn {
@@ -59,130 +140,15 @@ body {
     }
 }
 
-h1 {
-    font-family: 'Questrial', sans-serif;
-    font-size: 2.5rem;
-    color: white;
+/** Introduction page */
+
+.introduction {
+    width: 50%;
     text-align: center;
-    margin-top: 0;
-}
-
-h2 {
-    font-family: 'Questrial', sans-serif;
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-}
-
-h3 {
-    font-family: 'Questrial', sans-serif;
-    font-size: 1rem;
-    color: white;
-    text-align: center;
-}
-
-button {
-    background: transparent;
-    border: solid white 3px;
-    border-radius: 5px;
-    font-family: 'Questrial', sans-serif;
-    font-size: 1.5rem;
-    color: white;
-}
-
-p {
-    font-family: 'Questrial', sans-serif;
-    font-size: 1rem;
-    color: white;
-    text-align: center;
-}
-
-section {
-    display: none;
-    margin: 0 auto;
-    width: 400px;
-}
-
-section p {
-    text-align: left;
-}
-
-nav {
-    width: 100%;
-    margin: 0 auto 40px auto;
-    background-color: transparent;
-    position: sticky;
-    top: 0;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav li {
-    float: left;
-    width: 20%;
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    font-family: 'Questrial', sans-serif;
-    font-size: 1rem;
-    color: white;
-    padding: 10px 0;
-}
-
-nav ul::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .top {
     display: none;
-}
-
-footer {
-    display: none;
-    background-color: rgba(113, 113, 199, 1);
-    flex-shrink: 0;
-}
-
-a {
-    color: inherit;
-}
-
-.container {
-    display: none;
-    align-items: flex-start;
-    justify-content: center;
-    height: 50%;
-    flex: 1 0 auto;
-}
-
-.message {
-    height: 5vh;
-    overflow: scroll;
-}
-
-.chat {
-    font-family: 'JetBrains Mono', monospace;
-    color: white;
-    background: black;
-    height: 25vh;
-    width: 50vh;
-    overflow: scroll;
-}
-
-.interests {
-    max-height: 100%;
-}
-
-.row {
-    align-self: flex-start;
-}
-
-.bg {
-    position: absolute;
 }
 
 header {
@@ -201,13 +167,6 @@ header {
     transform: translateY(20%);
 }
 
-.video {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-}
-
 @supports (backdrop-filter: blur(10px)) {
     .visually-hidden {
         position: absolute;
@@ -222,4 +181,104 @@ header {
     .visually-hidden.fallback {
         position: relative;
     }
+}
+
+section {
+    display: none;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.bodywithoutfooter {
+    flex: 1 0 auto;
+}
+
+footer {
+    display: none;
+    background-color: rgba(113, 113, 199, 1);
+    flex-shrink: 0;
+}
+
+.container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+/** Professional life page */
+
+/** Interests page */
+
+.interests {
+    text-align: center;
+    width: 100%;
+}
+
+.lol, .minecraft, .skyrim {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.lolcontent, .minecraftcontent, .skyrimcontent {
+    width: 40%;
+}
+
+.lolcontent h4, .minecraftcontent h4, .skyrimcontent h4 {
+    text-align: center;
+}
+
+.info {
+    position: relative;
+    cursor: help;
+    color: rgba(113, 113, 199, 1);
+}
+
+.info:hover::after, .info:focus::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: -1.4em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+/** Projects page */
+
+/** My activity page */
+
+.message {
+    font-family: 'JetBrains Mono', monospace;
+    color: #F7F7FF;
+    background: black;
+    width: 50vw;
+}
+
+.chat {
+    font-family: 'JetBrains Mono', monospace;
+    color: #F7F7FF;
+    background: black;
+    height: 25vh;
+    width: 50vw;
+    overflow-y: scroll;
+    resize: none;
+}
+
+.activitycontainer {
+    align-items: flex-start;
+    justify-content: space-evenly;
 }

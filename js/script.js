@@ -38,6 +38,7 @@ socket.on('message', async (msg) => {
 });
 
 socket.on('accinfo', async (acc) => {
+    console.log(acc);
     accinfo.textContent = `${acc.name} ${acc.tier} ${acc.rank} ${acc.lp} ${acc.wr}`;
 });
 

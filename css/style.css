@@ -215,6 +215,13 @@ footer {
     object-fit: cover;
 }
 
+.scrolltotop {
+    position: absolute;
+    margin-left: 2vw;
+    margin-top: 3.5vh;
+    color: #F7F7FF;
+}
+
 /** Professional life page */
 
 /** Interests page */
@@ -241,20 +248,71 @@ footer {
     text-align: center;
 }
 
-.info {
+.minecraftcontent a {
     position: relative;
-    cursor: help;
     color: rgba(113, 113, 199, 1);
+    text-decoration: none;
 }
 
-.info:hover::after, .info:focus::after {
-    content: attr(aria-label);
+.interests * {
+    box-sizing: border-box
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.other p {
+    width: 50%;
+    text-align: center;
+}
+
+.text {
+    color: rgba(113, 113, 199, 1);
+    font-family: 'Questrial', sans-serif;
+    font-size: 15px;
+    padding-top: 3vh;
     position: absolute;
-    bottom: -1.4em;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 /** Projects page */

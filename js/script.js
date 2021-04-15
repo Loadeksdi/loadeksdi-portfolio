@@ -95,7 +95,7 @@ document.querySelector("form").addEventListener('submit', function (e) {
     if (input.value) {
         const message = {
             id,
-            author: nickname.value,
+            author,
             text: input.value
         };
         input.value = "";

@@ -86,7 +86,7 @@ document.querySelector("form").addEventListener('submit', function (e) {
         author = input.value;
         chat.value = `You logged in as ${input.value}!`;
         input.placeholder = "Enter a message";
-        input.maxlength = 2000;
+        input.maxLength = 2000;
         input.value = "";
         first = false;
         return;

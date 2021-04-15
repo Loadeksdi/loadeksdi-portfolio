@@ -231,6 +231,12 @@ footer {
     width: 100%;
 }
 
+hr {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    background-color: #F7F7FF;
+}
+
 .lol, .minecraft, .skyrim {
     display: flex;
     flex-direction: row;
@@ -246,6 +252,57 @@ footer {
 
 .lolcontent h4, .minecraftcontent h4, .skyrimcontent h4 {
     text-align: center;
+}
+
+.lolinfographic {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    padding: 5px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    transform: translate(15px, 15px);
+}
+
+@supports (backdrop-filter: blur(10px)) {
+    .lolinfographic {
+        backdrop-filter: blur(10px);
+        background: none;
+    }
+}
+
+.lolinfographic * {
+    color: #F7F7FF;
+    text-align: right;
+    font-family: 'Questrial', sans-serif;
+    margin: 0;
+}
+
+.lolinfographic h2 {
+    font-size: 3em;
+}
+
+.lolinfographic h3 {
+    font-size: 2em;
+}
+
+.lolinfographic h4 {
+    font-size: 1em;
+}
+
+.lolpic {
+    position: relative;
+    overflow: hidden;
+}
+
+.lolpic img {
+    display: block;
+}
+
+.interests>div:not(.other) img {
+    height: 50vh;
 }
 
 .minecraftcontent a {

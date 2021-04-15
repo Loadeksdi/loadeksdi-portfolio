@@ -1,9 +1,8 @@
-//const socket = io("localhost:3000");
+//const socket = io("localhost:3000/");
 const socket = io("discord-bridge.loadeksdi.com");
 const chat = document.querySelector(".chat");
 const messages = [];
 const scrollbutton = document.querySelector(".scrolltotop");
-const accinfo = document.querySelector(".accinfo");
 let first = true;
 let author;
 let id;
@@ -38,8 +37,34 @@ socket.on('message', async (msg) => {
 });
 
 socket.on('accinfo', async (acc) => {
-    console.log(acc);
-    accinfo.textContent = `${acc.name} ${acc.tier} ${acc.rank} ${acc.lp} ${acc.wr}`;
+    const accinfo = document.querySelector(".lolinfographic");
+    const highestEloAcc = acc[0].wr > acc[1].wr ? acc[0] : acc[1];
+    const headers = Array.from(accinfo.childNodes).filter(node => {
+        console.dir(node);
+        return node.nodeType !== 3;
+    });
+    headers[0].textContent = highestEloAcc.name;
+    headers[1].textContent = `${highestEloAcc.tier} ${highestEloAcc.rank}`;
+    headers[2].textContent = `${highestEloAcc.lp}LP`
+    headers[3].textContent = `${new Intl.NumberFormat('en-EN', { maximumSignificantDigits: 3 }).format(highestEloAcc.wr * 100)}% winrate`;
+    let textcolor;
+    switch (highestEloAcc.tier) {
+        case "GOLD":
+            textcolor = "#f4d175";
+            break;
+        case "PLATINUM":
+            textcolor = "#6aa2a2";
+            break;
+        case "DIAMOND":
+            textcolor = "#5c6eb1";
+            break;
+    }
+    headers[1].style.color = textcolor;
+    if (highestEloAcc.name === "LearnByUnmaking") {
+        const img = document.querySelector(".lolpic img");
+        img.srcset = "/assets/images/lol2.webp";
+        img.src = "/assets/images/lol2.jpg";
+    }
 });
 
 function updateChat() {

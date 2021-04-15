@@ -40,7 +40,6 @@ socket.on('accinfo', async (acc) => {
     const accinfo = document.querySelector(".lolinfographic");
     const highestEloAcc = acc[0].wr > acc[1].wr ? acc[0] : acc[1];
     const headers = Array.from(accinfo.childNodes).filter(node => {
-        console.dir(node);
         return node.nodeType !== 3;
     });
     headers[0].textContent = highestEloAcc.name;

@@ -6,321 +6,378 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Questrial&family=Work+Sans:wght@700&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Questrial&family=Work+Sans:wght@700&display=swap"
+            rel="stylesheet">
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 
 <body>
-    <div class="bodywithoutfooter">
-        <div class="top">
-            <header>
-                <video class="video" no-controls muted autoplay loop>
-                    <source src="./assets/videos/bg.webm" type="video/webm">
-                    <source src="./assets/videos/bg_legacy.mp4" type="video/mp4">
-                </video>
-                <h1 class="headline">
-                    <span class="visually-hidden fallback">Loadeksdi's universe</span>
-                    <svg aria-hidden="true" id="lockup-headline-mask"
-                        class="headline lockup-headline-mask visually-hidden">
-                        <clipPath id="lockup-headline-mask-path">
-                            <text dominant-baseline="hanging" text-anchor="middle" x="50%" y="0em"
-                                dy="0.125em">Loadeksdi's
-                                universe</text>
-                        </clipPath>
-                    </svg>
-                </h1>
-            </header>
-            <nav>
-                <ul>
-                    <li onclick="updateDocumentBasedOnCaller(1)">Home</li>
-                    <li onclick="updateDocumentBasedOnCaller(2)">Professional life</li>
-                    <li onclick="updateDocumentBasedOnCaller(3)">Interests</li>
-                    <li onclick="updateDocumentBasedOnCaller(4)">Projects</li>
-                    <li onclick="updateDocumentBasedOnCaller(5)">My Activity</li>
-                </ul>
-            </nav>
-        </div>
-        <div class="container">
-            <section class="introduction">
-                <h2>Hello Traveler, welcome to my personal page</h2>
-                <p>I don't really know why I created this page. I'm glad you came tho. Please enjoy your stay. Most of
-                    things are probably WIP but I'd like to create a dynamic version of my universe based on my Internet
-                    activity.</p>
-            </section>
-            <section class="pro">
-                <h2>What I'm doing with my life</h2>
-                <p>As you may have understood it, I'm a Computer Science student. I do follow an engineer cursus at
-                    EFREI
-                    Paris school. In addition, I work partly for BNP Paribas as a Designer/Developer intervening for
-                    topics
-                    such as obsolescence,
-                    application maintenance and development of new features.<br> Last year I was already working as a
-                    helpdesk technician for the Salvation Army and got my University Technological Diploma at Paris
-                    University.</p>
-            </section>
-            <section class="interests">
-                <h2>My tastes</h2>
-                <h3>Video games</h3>
-                <p>I'm a huge video games player, I've been playing since I was 6 years old. My favourite games are
-                    League
-                    of Legends, Minecraft, The Elder Scrolls V : Skyrim, MMORPGs and most of Nintendo franchises.</p>
-                <hr>
-                <div class="lol">
-                    <div class="lolpic">
-                        <picture>
-                            <source srcset="assets/images/lol.webm" type="image/webm">
-                            <img src="assets/images/lol.jpg"
-                                alt="A champion from the video game League of Legends">
-                        </picture>
-                        <div class="lolinfographic">
-                            <h2></h2>
-                            <h3></h3>
-                            <h3></h3>
-                            <h4 class="winrate"></h4>
-                        </div>
-                    </div>
-                    <article class="lolcontent">
-                        <h4>League of Legends</h4>
-                        <p>League of Legends is one of the first online game I've played with Minecraft. It always and
-                            still
-                            has
-                            a special place in my heart. I've spent thousands of hours playing to it, and I feel like
-                            all
-                            big
-                            video games franchises bring a whole universe into their games. Despite its poor
-                            community
-                            and
-                            toxic ambience, I'd say it's more than a game, it's a story, that can be perceived for
-                            players as an involvment into a community where rank becomes a social construct. In
-                            addition, its fame and large diffusion thanks to competitions, streaming and ads makes
-                            League of Legends a global movement. I'm really happy about the
-                            announcement of the MMORPG based on LoL's universe and feel truly hyped to play it.
-                        </p>
-                    </article>
-                </div>
-                <hr>
-                <div class="minecraft">
-                    <article class="minecraftcontent">
-                        <h4>Minecraft</h4>
-                        <p>Minecraft is actually the first online game I've ever played as far as I remember. I've spend
-                            a
-                            lot
-                            of hours playing to it with my middle school friends too. In my opinion, Minecraft is THE
-                            game.
-                            Its ambience, music,
-                            concept which is relatively simple (a cubic world) makes it perfect and easily
-                            understandable
-                            for
-                            everyone.
-                            If humanity had to explain what a video game is, they probably should pick Minecraft. Even
-                            nowadays, I play it sometimes on my <a href="https://discord.gg/VSDh5AZ8YV"
-                                target="_blank">Discord guild's
-                                dedicated Minecraft
-                                server </a>! I also
-                            think
-                            that the command blocks are a part of the reason of why I showed interest into
-                            programming
-                            later
-                            on.</p>
-                    </article>
-                    <picture>
-                        <source srcset="assets/images/minecraft.webp" type="image/webp">
-                        <img src="assets/images/minecraft.jpg" alt="A screenshot from the video game Minecraft">
-                    </picture>
-                </div>
-                <hr>
-                <div class="skyrim">
-                    <picture>
-                        <source srcset="assets/images/skyrim.webp" type="image/webp">
-                        <img src="assets/images/skyrim.jpg"
-                            alt="A screenshot the video game The Elder Scrolls V : Skyrim">
-                    </picture>
-                    <article class="skyrimcontent">
-                        <h4>The Elder Scrolls V: Skyrim</h4>
-                        <p>Skyrim is the only opus of The Elder Scrolls I've been playing to. Its massive content and
+<div class="bodywithoutfooter">
+    <div class="top">
+        <header>
+            <video class="video" no-controls muted autoplay loop>
+                <source src="./assets/videos/bg.webm" type="video/webm">
+                <source src="./assets/videos/bg_legacy.mp4" type="video/mp4">
+            </video>
+            <h1 class="headline">
+                <span class="visually-hidden fallback">Loadeksdi's universe</span>
+                <svg aria-hidden="true" id="lockup-headline-mask"
+                     class="headline lockup-headline-mask visually-hidden">
+                    <clipPath id="lockup-headline-mask-path">
+                        <text dominant-baseline="hanging" text-anchor="middle" x="50%" y="0em"
+                              dy="0.125em">Loadeksdi's
                             universe
-                            made me simply love it. The action takes place in a fantasy medieval era, which corresponds
-                            to
-                            my
-                            favourite kind of historical period. This is the example, in my mind, that some video games
-                            are
-                            better to play solo than online, especially when designers put a lot of work in the game
-                            lore
-                            and
-                            environment.</p>
-                    </article>
-                </div>
-                <hr>
-                <div class="other">
-                    <h4>Other games</h4>
-                    <p>There are so many games that I've been playing but the objective is not to explain for all of
-                        them
-                        why did I particularly enjoyed them. I'll just give some more examples so you have a wider
-                        spectrum
-                        of my tastes:</p>
-                    <div class="slideshow-container">
-                        <!-- Full-width images with number and caption text -->
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/bdo.webp" type="image/webp">
-                            <img src="assets/images/bdo.jpg" style="width:100%"
-                                alt="A screenshot the video game Black Desert Online">
-                            </source>
-                            <div class="text">Black Desert Online</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/mario.webp" type="image/webp">
-                            <img src="assets/images/mario.jpg" style="width:100%" alt="Super Mario 3D All-stars">
-                            </source>
-                            <div class="text">Super Mario 3D All-stars</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/pokemon.webp" type="image/webp">
-                            <img src="assets/images/pokemon.jpg" style="width:100%" alt="Pokemon">
-                            </source>
-                            <div class="text">Pokemon</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/ssbu.webp" type="image/webp">
-                            <img src="assets/images/ssbu.jpg" style="width:100%" alt="Super Smash Bros. Ultimate">
-                            </source>
-                            <div class="text">Super Smash Bros. Ultimate</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/acnh.webp" type="image/webp">
-                            <img src="assets/images/acnh.jpg" style="width:100%" alt="Animal Crossing : New Horizons">
-                            </source>
-                            <div class="text">Animal Crossing : New Horizons</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/botw.webp" type="image/webp">
-                            <img src="assets/images/botw.jpg" style="width:100%"
-                                alt="The Legend of Zelda : Breath of the Wild">
-                            </source>
-                            <div class="text">The Legend of Zelda : Breath of the Wild</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/wow.webp" type="image/webp">
-                            <img src="assets/images/wow.jpg" style="width:100%" alt="World of Warcraft Classic">
-                            </source>
-                            <div class="text">World of Warcraft Classic</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/csgo.webp" type="image/webp">
-                            <img src="assets/images/csgo.jpg" style="width:100%"
-                                alt="Counter-Strike : Global Offensive">
-                            </source>
-                            <div class="text">Counter-Strike : Global Offensive</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/h1z1.webp" type="image/webp">
-                            <img src="assets/images/h1z1.jpg" style="width:100%" alt="Z1 Battle Royale">
-                            </source>
-                            <div class="text">Z1 Battle Royale</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/apex.webp" type="image/webp">
-                            <img src="assets/images/apex.jpg" style="width:100%" alt="Apex Legends">
-                            </source>
-                            <div class="text">Apex Legends</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/osu.webp" type="image/webp">
-                            <img src="assets/images/osu.jpg" style="width:100%" alt="osu!">
-                            </source>
-                            <div class="text">osu!</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/amongus.webp" type="image/webp">
-                            <img src="assets/images/amongus.jpg" style="width:100%" alt="Among Us">
-                            </source>
-                            <div class="text">Among Us</div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <source srcset="assets/images/hades.webp" type="image/webp">
-                            <img src="assets/images/hades.jpg" style="width:100%" alt="Hades">
-                            </source>
-                            <div class="text">Hades</div>
-                        </div>
+                        </text>
+                    </clipPath>
+                </svg>
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li onclick="updateDocumentBasedOnCaller(1)">Home</li>
+                <li onclick="updateDocumentBasedOnCaller(2)">Professional life</li>
+                <li onclick="updateDocumentBasedOnCaller(3)">Interests</li>
+                <li onclick="updateDocumentBasedOnCaller(4)">Projects</li>
+                <li onclick="updateDocumentBasedOnCaller(5)">My Activity</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <section class="introduction">
+            <h2>Hello Traveler, welcome to my personal page</h2>
+            <p>I don't really know why I created this page. I'm glad you came tho. Please enjoy your stay. Most of
+                things are probably WIP but I'd like to create a dynamic version of my universe based on my Internet
+                activity.</p>
+        </section>
+        <section class="pro">
+            <h2>What I'm doing with my life</h2>
+            <p>As you may have understood it, I'm a Computer Science student. I do follow an engineer cursus at
+                EFREI
+                Paris school. In addition, I work partly for BNP Paribas as a Designer/Developer intervening for
+                topics
+                such as obsolescence,
+                application maintenance and development of new features.<br> Last year I was already working as a
+                helpdesk technician for the Salvation Army and got my University Technological Diploma at Paris
+                University.</p>
+        </section>
+        <section class="interests">
+            <h2>My tastes</h2>
+            <h3>Video games</h3>
+            <p>I'm a huge video games player, I've been playing since I was 6 years old. My favourite games are
+                League
+                of Legends, Minecraft, The Elder Scrolls V : Skyrim, MMORPGs and most of Nintendo franchises.</p>
+            <hr>
+            <div class="lol">
+                <div class="lolpic">
+                    <picture>
+                        <source srcset="assets/images/lol.webp" type="image/webp">
+                        <img src="assets/images/lol.jpg"
+                             alt="A champion from the video game League of Legends">
+                    </picture>
+                    <div class="lolinfographic">
+                        <h2></h2>
+                        <h3></h3>
+                        <h3></h3>
+                        <h4 class="winrate"></h4>
                     </div>
                 </div>
+                <article class="lolcontent">
+                    <h4>League of Legends</h4>
+                    <p>League of Legends is one of the first online game I've played with Minecraft. It always and
+                        still
+                        has
+                        a special place in my heart. I've spent thousands of hours playing to it, and I feel like
+                        all
+                        big
+                        video games franchises bring a whole universe into their games. Despite its questionnable
+                        behaviour
+                        community
+                        and
+                        toxic ambience, I'd say it's more than a game, it's a story, that can be perceived for
+                        players as an involvment into a community where rank becomes a social construct. In
+                        addition, its fame and large diffusion thanks to competitions, streaming and ads makes
+                        League of Legends a global movement. I'm really happy about the
+                        announcement of the MMORPG based on LoL's universe and feel truly hyped to play it.
+                    </p>
+                </article>
+            </div>
+            <hr>
+            <div class="minecraft">
+                <article class="minecraftcontent">
+                    <h4>Minecraft</h4>
+                    <p>Minecraft is actually the first online game I've ever played as far as I remember. I've spend
+                        a
+                        lot
+                        of hours playing to it with my middle school friends too. In my opinion, Minecraft is THE
+                        game.
+                        Its ambience, music,
+                        concept which is relatively simple (a cubic world) makes it perfect and easily
+                        understandable
+                        for
+                        everyone.
+                        If humanity had to explain what a video game is, they probably should pick Minecraft. Even
+                        nowadays, I play it sometimes on my <a href="https://discord.gg/VSDh5AZ8YV"
+                                                               target="_blank">Discord guild's
+                            dedicated Minecraft
+                            server </a>! I also
+                        think
+                        that the command blocks are a part of the reason of why I showed interest into
+                        programming
+                        later
+                        on.</p>
+                </article>
+                <picture>
+                    <source srcset="assets/images/minecraft.webp" type="image/webp">
+                    <img src="assets/images/minecraft.jpg" alt="A screenshot from the video game Minecraft">
+                </picture>
+            </div>
+            <hr>
+            <div class="skyrim">
+                <picture>
+                    <source srcset="assets/images/skyrim.webp" type="image/webp">
+                    <img src="assets/images/skyrim.jpg"
+                         alt="A screenshot the video game The Elder Scrolls V : Skyrim">
+                </picture>
+                <article class="skyrimcontent">
+                    <h4>The Elder Scrolls V: Skyrim</h4>
+                    <p>Skyrim is the only opus of The Elder Scrolls I've been playing to. Its massive content and
+                        universe
+                        made me simply love it. The action takes place in a fantasy medieval era, which corresponds
+                        to
+                        my
+                        favourite kind of historical period. This is the example, in my mind, that some video games
+                        are
+                        better to play solo than online, especially when designers put a lot of work in the game
+                        lore
+                        and
+                        environment.</p>
+                </article>
+            </div>
+            <hr>
+            <div class="other">
+                <h4>Other games</h4>
+                <p>There are so many games that I've been playing but the objective is not to explain for all of
+                    them
+                    why did I particularly enjoyed them. I'll just give some more examples so you have a wider
+                    spectrum
+                    of my tastes:</p>
+                <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/bdo.webp" type="image/webp">
+                        <img src="assets/images/bdo.jpg" style="width:100%"
+                             alt="A screenshot the video game Black Desert Online">
+                        </source>
+                        <div class="text">Black Desert Online</div>
+                    </div>
 
-                <h3>Arts</h3>
-                <p>Just a quick note about art: I'm not an artist myself. I do not wish to put effort in discovering any
-                    art
-                    for an enough long period of time for it to be interesting. It might change a day or another but
-                    what I
-                    want to share here is my taste in genres of art I truly appreciate for their aesthetic. I don't even
-                    have an huge artistic culture, I've just discovered things that I like and I think that's enough to
-                    spread content.</p>
-                <h4>Music</h4>
-                <p></p>
-                <h4>Literature</h4>
-                <p></p>
-                <h4>Painting</h4>
-                <p></p>
-                <h4>Anime</h4>
-                <p></p>
-            </section>
-            <section class="projects">
-                <h2>What I like to put my energy into</h2>
-                <h3>Discord bots !</h3>
-                <p></p>
-            </section>
-            <section class="activity">
-                <h2>What am I currently doing ?</h2>
-                <div class="activitycontainer">
-                    <aside>
-                        <h3>Latest Twitter activity</h3>
-                        <a class="twitter-timeline" data-width="900" data-height="400" data-theme="dark"
-                            href="https://twitter.com/voidembracer99?ref_src=twsrc%5Etfw">Tweets by voidembracer99</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </aside>
-                    <form>
-                        <fieldset>
-                            <textarea class="chat" readOnly></textarea>
-                            <input type="text" id="message" class="message" placeholder="Enter a nickname"
-                                maxlength="15" required>
-                            <input type="submit" value="Send message">
-                        </fieldset>
-                    </form>
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/mario.webp" type="image/webp">
+                        <img src="assets/images/mario.jpg" style="width:100%" alt="Super Mario 3D All-stars">
+                        </source>
+                        <div class="text">Super Mario 3D All-stars</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/pokemon.webp" type="image/webp">
+                        <img src="assets/images/pokemon.jpg" style="width:100%" alt="Pokemon">
+                        </source>
+                        <div class="text">Pokemon</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/ssbu.webp" type="image/webp">
+                        <img src="assets/images/ssbu.jpg" style="width:100%" alt="Super Smash Bros. Ultimate">
+                        </source>
+                        <div class="text">Super Smash Bros. Ultimate</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/acnh.webp" type="image/webp">
+                        <img src="assets/images/acnh.jpg" style="width:100%" alt="Animal Crossing : New Horizons">
+                        </source>
+                        <div class="text">Animal Crossing : New Horizons</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/botw.webp" type="image/webp">
+                        <img src="assets/images/botw.jpg" style="width:100%"
+                             alt="The Legend of Zelda : Breath of the Wild">
+                        </source>
+                        <div class="text">The Legend of Zelda : Breath of the Wild</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/wow.webp" type="image/webp">
+                        <img src="assets/images/wow.jpg" style="width:100%" alt="World of Warcraft Classic">
+                        </source>
+                        <div class="text">World of Warcraft Classic</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/csgo.webp" type="image/webp">
+                        <img src="assets/images/csgo.jpg" style="width:100%"
+                             alt="Counter-Strike : Global Offensive">
+                        </source>
+                        <div class="text">Counter-Strike : Global Offensive</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/h1z1.webp" type="image/webp">
+                        <img src="assets/images/h1z1.jpg" style="width:100%" alt="Z1 Battle Royale">
+                        </source>
+                        <div class="text">Z1 Battle Royale</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/apex.webp" type="image/webp">
+                        <img src="assets/images/apex.jpg" style="width:100%" alt="Apex Legends">
+                        </source>
+                        <div class="text">Apex Legends</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/osu.webp" type="image/webp">
+                        <img src="assets/images/osu.jpg" style="width:100%" alt="osu!">
+                        </source>
+                        <div class="text">osu!</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/amongus.webp" type="image/webp">
+                        <img src="assets/images/amongus.jpg" style="width:100%" alt="Among Us">
+                        </source>
+                        <div class="text">Among Us</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <source srcset="assets/images/hades.webp" type="image/webp">
+                        <img src="assets/images/hades.jpg" style="width:100%" alt="Hades">
+                        </source>
+                        <div class="text">Hades</div>
+                    </div>
                 </div>
-            </section>
+            </div>
+
+            <h3>Arts</h3>
+            <p>Just a quick note about art: I'm not an artist myself. I do not wish to put effort in discovering any
+                art
+                for an enough long period of time for it to be interesting. It may change a day or another but
+                what I
+                want to share here is my taste in genres of art I truly appreciate for their aesthetic. I don't even
+                have an huge artistic culture, I've just discovered things that I like and I think that's enough to
+                spread content.</p>
+            <h4>Music</h4>
+            <p>Don't get me wrong, music is the art I enjoy the most. For me, the combination of both lyrics and
+                instrumental opens the door to a universe of universes. Each artist or group of artists can create their
+                own art and spread emotions all over the world to people who will be either moved by the text or
+                pleased by the instrumental or even both. For me, this is the main reason why this art is interesting,
+                it shows how
+                themes can be revisited or created from scratch. It is one of the greatest humanity's shard of culture.
+                <br> About me : I do
+                listen to a lot of music, and try to listen to a lot of different genres of it. My favourite style
+                is rap for sure, French or international though. I love to spread my discovers to my friends and
+                get their feedback about it to know if they enjoyed it as I did or not. Here is a quick list of artists
+                or bands that I like to listen to : </p>
+            <ul>
+                <li>Vald (French rap)</li>
+                <li>Lil Peep (Rap)</li>
+                <li>XXXTentacion (Rap)</li>
+                <li>Columbine (French rap)</li>
+                <li>Damso (French rap)</li>
+                <li>$uicideboy$ (Rap)</li>
+                <li>Youv Dee (French rap)</li>
+                <li>convolk (Rap)</li>
+                <li>DjEphixa (Dubstep)</li>
+                <li>TENDER (Electro)</li>
+                <li>Bring me the horizon (Alternative metal)</li>
+                <li>scale$ (Rap)</li>
+                <li>A group of artists with the same vibes but all of them are awesome in their own way:
+                    <ul>
+                        <li>1nonly</li>
+                        <li>lilbubblegum</li>
+                        <li>loat!</li>
+                        <li>HAARPER</li>
+                        <li>CORPSE</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>I'm forgetting a lot of others artists or bands but you'll find a link <a
+                    href="https://open.spotify.com/playlist/39Skr8oXTecV9ots9etf2m?si=f28df5ecbcea4480"
+                    target="_blank">here</a> to the
+                weekly Spotify playlist made for my Discord's server where people can share their favourite music. You
+                can try to guess my contributions to it! Finally, I invite you to check the <a
+                        href="https://www.youtube.com/c/TRASH%E6%96%B0%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3"
+                        target="_blank">Trash
+                    gang YouTube channel</a> (their AMVs are amazing) where I did found a lot of wonderful underground
+                artists and that deserve way more fame in my opinion.</p>
+            <h4>Literature</h4>
+            <p>When I was younger, I did 4 years of theater so I was in contact with the culture of plays from famous
+                and less known authors. I use to
+                read a lot of fantasy books such as Cats of the Clan, Narnia and His Dark Materials. I tried other
+                styles like Harlan Coben's books or the CHERUB saga for the thrilling. Not only reading novels, I was
+                also reading a lot
+                of comics. Although, I read a lot a few years ago, I do not read as much at the moment, because
+                I don't find the time of it and prefer to spend it into others activities (even if I'd like to discover
+                philosophical and religious books). During my high school formation, I had no choice but
+                to read traditional books from French authors and I find myself surprised in enjoying a lot of
+                them, especially poetry. As far as I'm concerned, my favourite is Flowers of Evil from Charles
+                Baudelaire since I had the
+                opportunity to analyze it in class and personally at home saw the parallel with Columbine's song "Les
+                prélis" which main
+                theme refers a lot to Baudelaire's original work.</p>
+            <h4>Painting</h4>
+            <p></p>
+            <h4>Anime</h4>
+            <p>Neon Genesis Evangelion, Shingeki No Kyojin, Devilman Crybaby, Erased, Kuroko no basket</p>
+        </section>
+        <section class="projects">
+            <h2>What I like to put my energy into</h2>
+            <h3>Discord bots !</h3>
+            <p></p>
+        </section>
+        <section class="activity">
+            <h2>What am I currently doing ?</h2>
+            <div class="activitycontainer">
+                <aside>
+                    <h3>Latest Twitter activity</h3>
+                    <a class="twitter-timeline" data-width="900" data-height="400" data-theme="dark"
+                       href="https://twitter.com/voidembracer99?ref_src=twsrc%5Etfw">Tweets by voidembracer99</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </aside>
+                <form>
+                    <fieldset>
+                        <textarea class="chat" readOnly></textarea>
+                        <input type="text" id="message" class="message" placeholder="Enter a nickname"
+                               maxlength="15" required>
+                        <input type="submit" value="Send message">
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="content">
+        <div class="firstFadeIn">
+            <h1>Welcome to my universe</h1>
         </div>
-        <div class="content">
-            <div class="firstFadeIn">
-                <h1>Welcome to my universe</h1>
-            </div>
-            <div class="secondFadeIn">
-                <button onclick="updateDocumentBasedOnCaller(0)">Enter ?</button>
-            </div>
+        <div class="secondFadeIn">
+            <button onclick="updateDocumentBasedOnCaller(0)">Enter ?</button>
         </div>
     </div>
-    <footer>
-        <button class="scrolltotop" onclick="topFunction()">Back to top</button>
-        <h2>
-            <a href="https://discord.gg/VSDh5AZ8YV" target="_blank"><i class="fab fa-discord"></i></a> &nbsp
-            <a href="https://twitter.com/voidembracer99" target="_blank"><i class="fab fa-twitter"></i></a> &nbsp
-            <a href="https://github.com/Loadeksdi" target="_blank"><i class="fab fa-github"></i></a>
-        </h2>
-    </footer>
+</div>
+<footer>
+    <button class="scrolltotop" onclick="topFunction()">Back to top</button>
+    <h2>
+        <a href="https://discord.gg/VSDh5AZ8YV" target="_blank"><i class="fab fa-discord"></i></a> &nbsp
+        <a href="https://twitter.com/voidembracer99" target="_blank"><i class="fab fa-twitter"></i></a> &nbsp
+        <a href="https://github.com/Loadeksdi" target="_blank"><i class="fab fa-github"></i></a>
+    </h2>
+</footer>
 </body>
 <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"
-    integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU"
-    crossorigin="anonymous"></script>
+        integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU"
+        crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 
 </html>

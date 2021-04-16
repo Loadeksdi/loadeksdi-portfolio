@@ -1,5 +1,8 @@
 # Loadeksdi's Universe
-<img width=64 length=64 src="assets/images/logo.png" alt="Loadeksdi's universe Logo"></img>
+<div align="center">
+    <img width=256 length=256 src="assets/images/logo.png" alt="Loadeksdi's universe Logo"></img>
+    <p>*A sneak peek into the life of a 20 year old developer.*</p>
+</div>
 
 # Disclaimer
 I do not pretend everything under that line to be accurate as of now. Most of it is probably work in progress for sure. If you find any bug or problem on the website, feel free to use the Issues sections to let me know accordingly.

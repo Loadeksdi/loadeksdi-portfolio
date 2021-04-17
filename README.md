@@ -1,6 +1,7 @@
 # Loadeksdi's Universe
 <div align="center">
     <img width=256 length=256 src="assets/images/logo.png" alt="Loadeksdi's universe Logo"></img>
+    <br>
     <i>A sneak peek into the life of a 20 year old developer.</i>
 </div>
 

@@ -1,5 +1,5 @@
-//const socket = io("localhost:3000/");
-const socket = io("discord-bridge.loadeksdi.com");
+const socket = io("localhost:3000/");
+//const socket = io("discord-bridge.loadeksdi.com");
 const chat = document.querySelector(".chat");
 const messages = [];
 const scrollbutton = document.querySelector(".scrolltotop");
@@ -36,6 +36,14 @@ socket.on('message', async (msg) => {
     updateChat();
 });
 
+function updateChat() {
+    let str = "";
+    messages.forEach(msg => {
+        str += `[${msg.date.toLocaleString(navigator.language)}] ${msg.author} : ${msg.text}\n`;
+    });
+    chat.value = str;
+}
+
 socket.on('accinfo', async (acc) => {
     const accinfo = document.querySelector(".lolinfographic");
     const highestEloAcc = acc[0].wr > acc[1].wr ? acc[0] : acc[1];
@@ -66,13 +74,19 @@ socket.on('accinfo', async (acc) => {
     }
 });
 
-function updateChat() {
-    let str = "";
-    messages.forEach(msg => {
-        str += `[${msg.date.toLocaleString(navigator.language)}] ${msg.author} : ${msg.text}\n`;
-    });
-    chat.value = str;
-}
+socket.on('discordinfo', async (msg) => {
+    const activityHeader = document.querySelector('.activityHeader');
+    let activityText;
+    switch (msg.status) {
+        case 'online':
+            activityText = "Hey, I am currently online, feel free to chat with me, I'll probably answer you within a few minutes!";
+            break;
+    }
+    if (msg.activity === undefined) {
+        activityText = "It appears that I'm doing nothing at the moment. "
+    }
+    console.log(activityText);
+});
 
 function topFunction() {
     document.body.scrollTop = 0;

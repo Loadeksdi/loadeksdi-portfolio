@@ -2,7 +2,7 @@
 <div align="center">
     <img width=256 length=256 src="assets/images/logo.png" alt="Loadeksdi's universe Logo"></img>
     <br>
-    <i>A sneak peek into the life of a 20 year old developer.</i>
+    <i>A sneak peek into the life of a 20 year old GROS BG, sérieusement (means seriously in french) a developer?! Yes. A beautiful man? Yup. Just think about it. Do you want to  see that website or not? Of course you do. Take a peek now into what's deemed to be one of the most influential gros BGs of the twenty-first century.</i>
 </div>
 
 # Disclaimer ⚠️

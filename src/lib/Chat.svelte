@@ -3,7 +3,7 @@
 
 	let socket: WebSocket;
 	onMount(() => {
-		socket = new WebSocket('ws://discord-bridge.loadeksdi.com/');
+		socket = new WebSocket('wss://discord-bridge.loadeksdi.com/');
 		socket.addEventListener('open', () => {
 			console.log('Opened');
 		});

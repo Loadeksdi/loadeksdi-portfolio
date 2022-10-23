@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { writable } from 'svelte/store';
 
 	let socket: WebSocket;
 	onMount(() => {
@@ -11,14 +12,14 @@
 			chat += `[${new Date().toLocaleString()}] Loadeksdi: ${JSON.parse(event.data).text}\n`;
 		};
 	});
-	const id = crypto.randomUUID();
-	let placeholder: string = 'Enter a nickname';
+	let placeholder: string = 'Your nickname';
 	let maxlength: number = 16;
 	let value: string = '';
 	let chat: string = '';
 	let logged: boolean = false;
 	let type: string = 'nickname';
 	let nickname: string;
+	const id: string = crypto.randomUUID();
 	const updateChat = function (): void {
 		if (!logged) {
 			logged = true;
@@ -37,7 +38,7 @@
 </script>
 
 <section class="text-left">
-	<h2 class="text-2xl font-bold">Chat with me</h2>
+	<h2 class="text-2xl font-cursive text-yellow-200">Chat with me</h2>
 	<form on:submit|preventDefault={updateChat}>
 		<fieldset>
 			<label for="chat">Chat</label>

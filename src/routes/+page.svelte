@@ -1,3 +1,8 @@
+<script>
+	import Navbar from "$lib/Navbar.svelte";
+
+</script>
+<Navbar/>
 <main class="flex h-screen">
 	<div class="m-auto">
 		<h1 class="text-3xl font-bold underline">Welcome to SvelteKit!</h1>

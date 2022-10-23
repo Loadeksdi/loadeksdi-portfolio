@@ -25,7 +25,7 @@
 		const storedUuid = localStorage.getItem('uuid');
 		uuid = writable(storedUuid);
 		uuid.subscribe((value) => {
-			localStorage.setItem('uuid', value ? value : crypto.randomUUID());
+			localStorage.setItem('uuid', value ? value : '');
 		});
 	}
 	const updateChat = function (): void {
@@ -36,9 +36,9 @@
 			maxlength = 2000;
 			chat += `You successfully logged in as ${value}!\n`;
 			nickname = value;
-			value = '';
+			value = crypto.randomUUID();
 		} else {
-			socket.send(JSON.stringify({ id: localStorage.getItem('uuid'), text: value, nickname }));
+			socket.send(JSON.stringify({ id: uuid, text: value, nickname }));
 			chat += `[${new Date().toLocaleString()}] ${nickname}: ${value}\n`;
 			value = '';
 		}

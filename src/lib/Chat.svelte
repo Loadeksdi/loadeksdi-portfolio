@@ -3,7 +3,7 @@
 
 	let socket: WebSocket;
 	onMount(() => {
-		socket = new WebSocket('ws://127.0.0.1:3000/');
+		socket = new WebSocket('ws://discord-bridge.loadeksdi.com/');
 		socket.addEventListener('open', () => {
 			console.log('Opened');
 		});
@@ -11,7 +11,7 @@
 			chat += `[${new Date().toLocaleString()}] Loadeksdi: ${JSON.parse(event.data).text}\n`;
 		};
 	});
-
+	const id = crypto.randomUUID();
 	let placeholder: string = 'Enter a nickname';
 	let maxlength: number = 16;
 	let value: string = '';
@@ -29,7 +29,7 @@
 			nickname = value;
 			value = '';
 		} else {
-			socket.send(JSON.stringify({ text: value }));
+			socket.send(JSON.stringify({ id, text: value, nickname }));
 			chat += `[${new Date().toLocaleString()}] ${nickname}: ${value}\n`;
 			value = '';
 		}

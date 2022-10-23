@@ -1,6 +1,7 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
-	import { writable } from 'svelte/store';
+	import { writable, type Writable } from 'svelte/store';
 
 	let socket: WebSocket;
 	onMount(() => {
@@ -19,7 +20,14 @@
 	let logged: boolean = false;
 	let type: string = 'nickname';
 	let nickname: string;
-	const id: string = crypto.randomUUID();
+	let uuid: Writable<string | null>;
+	if (browser) {
+		const storedUuid = localStorage.getItem('uuid');
+		uuid = writable(storedUuid);
+		uuid.subscribe((value) => {
+			localStorage.setItem('uuid', value ? value : crypto.randomUUID());
+		});
+	}
 	const updateChat = function (): void {
 		if (!logged) {
 			logged = true;
@@ -30,7 +38,7 @@
 			nickname = value;
 			value = '';
 		} else {
-			socket.send(JSON.stringify({ id, text: value, nickname }));
+			socket.send(JSON.stringify({ id: localStorage.getItem('uuid'), text: value, nickname }));
 			chat += `[${new Date().toLocaleString()}] ${nickname}: ${value}\n`;
 			value = '';
 		}

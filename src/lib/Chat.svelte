@@ -3,6 +3,11 @@
 	import { onMount } from 'svelte';
 	import { writable, type Writable } from 'svelte/store';
 
+	interface User {
+		name: string;
+		uuid: string;
+	}
+
 	let socket: WebSocket;
 	onMount(() => {
 		socket = new WebSocket('wss://discord-bridge.loadeksdi.com/');
@@ -17,32 +22,43 @@
 	let maxlength: number = 16;
 	let value: string = '';
 	let chat: string = '';
-	let logged: boolean = false;
 	let type: string = 'nickname';
-	let nickname: string;
-	let uuid: Writable<string | null>;
+	let user: Writable<User | null>;
+	let storedUser: User | null = null;
+	const firstUpdate = (nickname: string) => {
+		type = 'message';
+		placeholder = 'Send a message';
+		maxlength = 2000;
+		chat += `You successfully logged in as ${nickname}!\n`;
+	};
 	if (browser) {
-		const storedUuid = localStorage.getItem('uuid');
-		uuid = writable(storedUuid);
-		uuid.subscribe((value) => {
-			localStorage.setItem('uuid', value ? value : '');
+		const storedUserString: string | null = localStorage.getItem('user');
+		if (storedUserString) {
+			storedUser = JSON.parse(storedUserString);
+			if (storedUser) {
+				firstUpdate(storedUser.name);
+			}
+		}
+		user = writable(storedUser);
+		user.subscribe((value) => {
+			if (!value) {
+				return;
+			}
+			storedUser = value;
+			localStorage.setItem('user', JSON.stringify(value));
 		});
 	}
-	const updateChat = function (): void {
-		if (!logged) {
-			logged = true;
-			type = 'message';
-			placeholder = 'Send a message';
-			maxlength = 2000;
-			chat += `You successfully logged in as ${value}!\n`;
-			nickname = value;
-			value = crypto.randomUUID();
+	const updateChat = () => {
+		if (!storedUser) {
+			firstUpdate(value);
+			value = '';
+			user.set({ name: value, uuid: crypto.randomUUID() });
 		} else {
-			socket.send(JSON.stringify({ id: uuid, text: value, nickname }));
-			chat += `[${new Date().toLocaleString()}] ${nickname}: ${value}\n`;
+			socket.send(JSON.stringify({ id: storedUser.uuid, text: value, nickname: storedUser.name }));
+			chat += `[${new Date().toLocaleString()}] ${storedUser.name}: ${value}\n`;
 			value = '';
 		}
-	};
+	};	
 </script>
 
 <section class="text-left">

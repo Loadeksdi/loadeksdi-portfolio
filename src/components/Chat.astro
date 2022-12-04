@@ -1,0 +1,29 @@
+---
+interface User {
+    name: string;
+    uuid: string;
+}
+---
+
+<section class="text-left">
+    <h2 class="text-2xl font-cursive text-purple-700">Chat with me</h2>
+    <form>
+        <fieldset>
+            <label for="chat">Chat</label>
+            <textarea id="chat" name="chat" class="w-full h-28" readonly
+            ></textarea>
+            <div class="flex place-content-between">
+                <label for="" class="mx-2"></label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Type your message here..."
+                    required
+                    class="w-full rounded mr-0.5"></textarea>
+                <button type="submit" class="rounded px-3 py-0.5 bg-yellow-200"
+                    >Send</button
+                >
+            </div>
+        </fieldset>
+    </form>
+</section>

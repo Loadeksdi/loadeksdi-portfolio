@@ -4,36 +4,30 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Loadeksdi's portfolio">
-	<main class="flex items-center justify-center h-screen mx-52 text-rose-400">
-		<div class="flex flex-col">
+	<main class="flex flex-col items-center h-full mx-10 text-rose-400">
+		<h1 class="text-center text-5xl mt-10 font-monospace">
+			Welcome to <span class="text-white">Loadeksdi's</span> portfolio!
+		</h1>
+		<div class="flex flex-col justify-evenly items-start h-screen">
 			<Card
 				href="/formation"
-				title="Formation"
-				body="My formation and my experience in the IT world."
-				style="my-28"
+				title="Background"
+				body="My studies and experience in the IT world."
 			/>
 			<Card
 				href="/showcase"
 				title="Showcase"
 				body="Showcasing my work and projects I've worked on."
-				style="my-28"
 			/>
-		</div>
-		<h1 class="flex text-center text-5xl m-10">
-			Welcome to Loadeksdi's portfolio!
-		</h1>
-		<div class="flex flex-col">
 			<Card
 				href="/about"
 				title="Interests"
 				body="What I'm interested in and what I'm currently learning."
-				style="my-28 text-right"
 			/>
 			<Card
 				href="/contact"
 				title="Contact"
 				body="Want to talk with me? I'd love to hear from you."
-				style="my-28 text-right"
 			/>
 		</div>
 	</main>

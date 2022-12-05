@@ -1,0 +1,18 @@
+---
+export interface Icon {
+    url: String;
+    assetPath: String;
+    text: String;
+    alt: String;
+}
+
+const { url, assetPath, text, alt } = Astro.props;
+---
+
+<li class="flex flex-row w-full">    
+    <a href={url} class="flex">
+        <img src={assetPath} alt={alt} width="48" height="48" /><span
+            class="ml-5 underline self-center">{text}</span
+        >
+    </a>
+</li>

@@ -3,22 +3,17 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
-	style: string;
 }
 
-const { href, title, body, style } = Astro.props;
+const { href, title, body } = Astro.props;
 ---
 
-<section class={style}>
+<section class="flex">
 	<a href={href}>
-		<h2>
-			{
-				(style.includes("right") && <span>&larr; {title}</span>) || (
-					<span>{title} &rarr;</span>
-				)
-			}
+		<h2 class="text-2xl font-bold font-monospace">
+			<span>{title} &rarr;</span>
 		</h2>
-		<p>
+		<p class="text-white font-sans">
 			{body}
 		</p>
 	</a>

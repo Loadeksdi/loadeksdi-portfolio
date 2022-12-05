@@ -1,37 +1,60 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Chat from "../../components/Chat.astro";
+import linkedin from "../../assets/linkedin.png";
+import discord from "../../assets/discord.png";
+import email from "../../assets/email.png";
+import Icon from "../../components/Icon.astro";
 ---
 
 <Layout title="Loadeksdi's portfolio | Contact">
-    <main class="flex-1 flex flex-col gap-4 mx-10 font-sans">
-        <h1 class="text-3xl font-cursive font-bold text-center text-purple-900">
+    <main class="flex flex-col items-center h-full mx-10">
+        <h1 class="mt-10 text-3xl text-center font-monospace text-rose-400">
             Contact
         </h1>
-        <Chat />
-        <h2 class="text-2xl font-cursive text-left text-purple-700">
-            Other ways to get in touch with me
-        </h2>
-        <div class="flex flex-col text-1xl justify-center text-left gap-2">
-            <div>
-                <a href="mailto:nicolas.load@gmail.com"
-                    >Send me an email<i class="fa fa-envelope fa-2x"></i>
-                </a>
-            </div>
-            <div>
+        <div class="flex flex-col items-start">
+            <Chat />
+            <div class="flex flex-col w-full">
+                <h2
+                    class="mt-5 text-2xl font-monospace text-left text-rose-400"
+                >
+                    Want to hire me?
+                </h2>
                 <a
-                    href="https://www.linkedin.com/in/nicolas-orvain/"
-                    target="_blank"
-                    rel="noreferrer"
-                    >Connect with me on LinkedIn<i class="fab fa-linkedin fa-2x"
-                    ></i>
+                    class="button btn mt-5 text-center font-sans text-rose-400 rounded-2xl border-white border-2 px-1 py-2 transition duration-1000 ease-in-out transform hover:bg-white"
+                    href="/resume.pdf"
+                    download="resume"
+                    >Download my resume
                 </a>
             </div>
             <div>
-                <span
-                    >Talk with me on Discord: Ｌｏａｄ#7314<i
-                        class="fab fa-discord fa-2x"></i>
-                </span>
+                <h2
+                    class="mt-10 text-2xl font-monospace text-left text-rose-400"
+                >
+                    Other ways to get in touch with me
+                </h2>
+                <ul
+                    class="flex flex-col items-start justify-evenly w-full h-full text-white"
+                >
+                    <Icon
+                        text="Send me an email"
+                        assetPath={email}
+                        url="mailto:nicolas.load@gmail.com"
+                        alt="Email logo"
+                    />
+                    <Icon
+                        text="Connect with me on LinkedIn"
+                        assetPath={linkedin}
+                        url="https://www.linkedin.com/in/nicolas-orvain/"
+                        alt="LinkedIn logo"
+                    />
+                    <Icon
+                        text="My Discord: Ｌｏａｄ#7314"
+                        assetPath={discord}
+                        url="https://discord.gg/8RFCzsBkHX"
+                        alt="Discord logo"
+                    />
+                </ul>
             </div>
         </div>
     </main>

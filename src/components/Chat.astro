@@ -1,8 +1,44 @@
 ---
 interface User {
-    name: string;
+    nickname: string;
     uuid: string;
 }
+import WebSocket from "ws";
+
+let socket: WebSocket = new WebSocket("wss://discord-bridge.loadeksdi.com/");
+
+let maxLength: number = 16;
+let value: string = "";
+let chat: string = "";
+let type: string = "nickname";
+let nickname: string;
+let uuid: string | null;
+let user: User;
+let storedUser: User | null = null;
+let placeholder: string = "Enter your nickname";
+
+const firstUpdate = (nickname: string) => {
+    type = "message";
+    placeholder = "Send a message";
+    maxLength = 2000;
+    chat += `You successfully logged in as ${nickname}!\n`;
+};
+
+socket.on("open", () => {
+    console.log("Connected to the server");
+    user = {
+        nickname: localStorage.getItem("nickname") || "load",
+        uuid: crypto.randomUUID(),
+    };
+    socket.send(
+        JSON.stringify({ id: user.uuid, nickname: user.nickname, text: "meow" })
+    );
+});
+
+socket.on("message", (data: any) => {
+    const message = JSON.parse(data.toString());
+    chat += `${message.nickname}: ${message.text}\n`;
+});
 ---
 
 <section class="mt-10 text-left flex flex-col w-full">
@@ -10,17 +46,24 @@ interface User {
     <form class="mt-5">
         <fieldset>
             <label for="chat" class="flex font-sans text-white">Chat</label>
-            <textarea id="chat" name="chat" class="flex h-28 w-full" readonly
-            ></textarea>
+            <textarea
+                id="chat"
+                name="chat"
+                class="flex h-28 w-full"
+                readonly
+                value={chat}></textarea>
             <div class="flex place-content-between mt-1">
-                <label for="message"></label>
+                <label for={type}></label>
                 <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Type your message here..."
+                    id={type}
+                    name={type}
+                    placeholder={placeholder}
                     required
+                    maxlength={maxLength}
                     class="w-full"></textarea>
-                <button type="submit" class="m-1 bg-none text-rose-400 text-sans"
+                <button
+                    type="submit"
+                    class="button m-1 bg-none text-rose-400 text-sans"
                     >Send ✉</button
                 >
             </div>

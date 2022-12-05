@@ -1,0 +1,25 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+	style: string;
+}
+
+const { href, title, body, style } = Astro.props;
+---
+
+<section class={style}>
+	<a href={href}>
+		<h2>
+			{
+				(style.includes("right") && <span>&larr; {title}</span>) || (
+					<span>{title} &rarr;</span>
+				)
+			}
+		</h2>
+		<p>
+			{body}
+		</p>
+	</a>
+</section>

@@ -1,0 +1,62 @@
+---
+import Formation from "../../components/Formation.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Loadeksdi's portfolio | Contact">
+    <main class="flex flex-col items-center h-full mx-10">
+        <h1 class="mt-10 text-3xl text-center font-monospace text-rose-400">
+            Background
+        </h1>
+        <section class="mt-10 font-sans">
+            <div class="flex justify-between text-rose-400 text-2xl">
+                <h2 class="flex">Formations</h2>
+                <h2 class="flex opacity-50">Work experience</h2>
+            </div>
+            <script>
+                const handleSwitch = () => {
+                    const formation = document.querySelector(".formations");
+                    const works = document.querySelector(".works");
+                    if (!formation || !works) {
+                        return;
+                    }
+                    h2[0].classList.toggle("opacity-50");
+                    h2[1].classList.toggle("opacity-50");
+                    formation.classList.toggle("hidden");
+                    works.classList.toggle("hidden");
+                };
+                const h2 = document.querySelectorAll("h2");
+                h2.forEach((h) => h.addEventListener("click", handleSwitch));
+            </script>
+            <div class="formations">
+                <Formation
+                    period="2020-2023"
+                    title="Masters Degree in Software and Information Systems at Efrei Paris"
+                    text="Speciality in Software Engineering. These 3 years were for me the occasion for me to reinforce both my practical and theoritical knowledge in development, but also in different fields of IT such as networking, maths, big data, AI, etc. In addition, I could reinforce my communication and soft-skills through dedicated modules, including: Communication, Argumentation, Project management, and even Psychology. Technically I could go beyond my previous knowledge and also it gave me the approach to discover new technologies by myself. Nowadays, I know that I have acquired a solid basis, coming from state-of-the-art practices, such as TDD and DevOps ones."
+                />
+                <Formation
+                    period="2018-2020"
+                    title="Bachelor's Degree equivalent in Computer Science at IUT Paris Descartes"
+                    text="These 2 years of formation were my first true introduction to coding, and IT in general. We also had courses about accountability, project management and organization. Moreover, it was the first real time I was facing algorithms, data structures, programming languages and OOP with some web development too. Maths modules also had their importance with graphs and linear algebra for instance. In terms of tools I also discovered Git and Linux, and SQL. The amount of knowledge I acquired during these 2 years was huge, and I am very grateful for that."
+                />
+                <Formation
+                    period="2017-2018"
+                    title="Scientific Baccalaureate at Lycée André Boulloche"
+                    text="This first diploma opened me the door to my future studies while giving me a scientific methodology through maths, biology, physics and chemistry."
+                />
+            </div>
+            <div class="works hidden">
+                <Formation
+                    period="2020-2023"
+                    title="Analyst Developer at BNP Paribas | Work-study contract"
+                    text="Developed APIs with Java Spring Boot to monitor through technical indicators an existing application and write associated production start-up files, manage campaigns to target customers (~10k targeted customers per campaign). Designed and developped two interfaces using SPIRIT (internal web framework) and formalized associated technical files. Familiar with continuous integration and delivery of applications through a DevOps toolchain. Managed technical obsolescence of an administration tool of customers portfolios. Summarized and schematized core business algorithms of portfolios balancing"
+                />
+                <Formation
+                    period="2019-2020"
+                    title="IT Support Technician at The Salvation Army | Work-study contract"
+                    text="Administered user accounts with Active Directory. Prioritized and solved incidents using Zendesk (~10 tickets per day). Implemented a dashboard to visualize incidents, tickets, and SLA. Provided assistance to users and set up IT tools. Configured and recovered computer data."
+                />
+            </div>
+        </section>
+    </main>
+</Layout>

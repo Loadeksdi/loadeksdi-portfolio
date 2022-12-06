@@ -1,9 +1,9 @@
 ---
+import WebSocket from "ws";
 interface User {
     nickname: string;
     uuid: string;
 }
-import WebSocket from "ws";
 
 let socket: WebSocket = new WebSocket("wss://discord-bridge.loadeksdi.com/");
 

@@ -1,0 +1,17 @@
+---
+export interface Formation {
+    title: string;
+    text: string;
+    period: string;
+}
+
+const { period, title, text } = Astro.props;
+---
+<div class="mt-10 text-white font-sans">
+    <h3 class="font-bold">
+        {period} &rarr; {title}
+    </h3>
+    <p class="mt-5">
+        {text}
+    </p>
+</div>

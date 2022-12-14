@@ -1,0 +1,49 @@
+---
+import Project from "../../components/Project.astro";
+import Layout from "../../layouts/Layout.astro";
+import aoc from "../../assets/aoc.png";
+import weatherbet from "../../assets/weatherbet.png";
+import onlyfrogz from "../../assets/onlyfrogz.png";
+---
+
+<Layout title="Loadeksdi's portfolio | Showcase">
+    <main class="flex flex-col items-center h-full">
+        <h1 class="mt-10 text-3xl text-center font-monospace text-rose-400">
+            <a href="/">Showcase</a>
+        </h1>
+        <Project
+            title="Advent of Code 2022"
+            text="I created a website that displays my writeups for the advent of code of 2022. The concept is that between the 1st of December and the 25th, you receive daily themed coding challenges. In my case, I try to clear them in Rust, a language I am not yet proficient with. This website is made with the Fresh framework, running on Deno and deployed with Deno Deploy. It is also my first time using Deno for frontend development and the experience was pretty enjoyable."
+            image={aoc}
+            url="https://loadeksdi-advent-writeups.deno.dev/"
+            technologies="Fresh, Deno, Deno Deploy, Rust"
+        />
+        <Project
+            title="WeatherBet"
+            text="meow"
+            image={weatherbet}
+            url="https://weather-bet.clement-tolois.fr/"
+            technologies="Node, TypeScript, AWS Lambda, Vue"
+        />
+        <Project
+            title="OnlyFrogz"
+            text="meow"
+            image={onlyfrogz}
+            url="https://onlyfrogz.com"
+            technologies="Laravel, PHP, PostgreSQL, GitLab CI"
+        />
+        <section
+            class="flex flex-col items-center w-full mt-10 text-center font-monospace"
+        >
+            <h2 class="text-2xl text-rose-400">
+                And this responsive website, deployed thanks to <a
+                    href="https://vercel.com/"
+                    class="text-white underline">Vercel</a
+                > and built with <a
+                    href="https://astro.build/"
+                    class="text-white underline">Astro</a
+                >!
+            </h2>
+        </section>
+    </main>
+</Layout>
